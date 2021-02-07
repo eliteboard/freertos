@@ -49,6 +49,7 @@
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
+osThreadId myBlinkTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -56,6 +57,7 @@ osThreadId defaultTaskHandle;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
+void blinkLED(void const * argument);
 
 extern void MX_LWIP_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -107,6 +109,10 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 256);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
+  /* definition and creation of myBlinkTask */
+  osThreadDef(myBlinkTask, blinkLED, osPriorityIdle, 0, 256);
+  myBlinkTaskHandle = osThreadCreate(osThread(myBlinkTask), NULL);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -131,6 +137,25 @@ void StartDefaultTask(void const * argument)
     osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
+}
+
+/* USER CODE BEGIN Header_blinkLED */
+/**
+* @brief Function implementing the myBlinkTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_blinkLED */
+void blinkLED(void const * argument)
+{
+  /* USER CODE BEGIN blinkLED */
+  /* Infinite loop */
+  for(;;)
+  {
+    HAL_GPIO_TogglePin(SEGA_GPIO_Port, SEGA_Pin);
+    osDelay(1000);
+  }
+  /* USER CODE END blinkLED */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -58,6 +58,26 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define BTN1_Pin GPIO_PIN_12
+#define BTN1_GPIO_Port GPIOJ
+#define BTN2_Pin GPIO_PIN_13
+#define BTN2_GPIO_Port GPIOJ
+#define SEGA_Pin GPIO_PIN_0
+#define SEGA_GPIO_Port GPIOJ
+#define SEGDP_Pin GPIO_PIN_7
+#define SEGDP_GPIO_Port GPIOJ
+#define SEGG_Pin GPIO_PIN_6
+#define SEGG_GPIO_Port GPIOJ
+#define SEGB_Pin GPIO_PIN_1
+#define SEGB_GPIO_Port GPIOJ
+#define SEGF_Pin GPIO_PIN_5
+#define SEGF_GPIO_Port GPIOJ
+#define SEGC_Pin GPIO_PIN_2
+#define SEGC_GPIO_Port GPIOJ
+#define SEGD_Pin GPIO_PIN_3
+#define SEGD_GPIO_Port GPIOJ
+#define SEGE_Pin GPIO_PIN_4
+#define SEGE_GPIO_Port GPIOJ
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
