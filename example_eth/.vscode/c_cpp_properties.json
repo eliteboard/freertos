@@ -4,10 +4,14 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/*",
-                "${workspaceFolder}/Inc/*",
+                "${workspaceFolder}/Core/Inc/*",
                 "${workspaceFolder}/Drivers/CMSIS/Include/*",
                 "${workspaceFolder}/Drivers/STM32H7xx_HAL_Driver/Inc/*",
-                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Include/*"
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Include/*",
+                "${workspaceFolder}/Middlewares/Third_Party/FreeRTOS/Source/**",
+                "${workspaceFolder}/Middlewares/Third_Party/LwIP/**",
+                "${workspaceFolder}/LWIP/App/*",
+                "${workspaceFolder}/LWIP/Target/*"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
@@ -22,10 +26,14 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/*",
-                "${workspaceFolder}/Inc/*",
+                "${workspaceFolder}/Core/Inc/*",
                 "${workspaceFolder}/Drivers/CMSIS/Include/*",
                 "${workspaceFolder}/Drivers/STM32H7xx_HAL_Driver/Inc/*",
-                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Include/*"
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Include/*",
+                "${workspaceFolder}/Middlewares/Third_Party/FreeRTOS/Source/**",
+                "${workspaceFolder}/Middlewares/Third_Party/LwIP/**",
+                "${workspaceFolder}/LWIP/App/*",
+                "${workspaceFolder}/LWIP/Target/*"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
@@ -40,10 +48,14 @@
             "name": "osx",
             "includePath": [
                 "${workspaceFolder}/*",
-                "${workspaceFolder}/Inc/*",
+                "${workspaceFolder}/Core/Inc/*",
                 "${workspaceFolder}/Drivers/CMSIS/Include/*",
                 "${workspaceFolder}/Drivers/STM32H7xx_HAL_Driver/Inc/*",
-                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Include/*"
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Include/*",
+                "${workspaceFolder}/Middlewares/Third_Party/FreeRTOS/Source/**",
+                "${workspaceFolder}/Middlewares/Third_Party/LwIP/**",
+                "${workspaceFolder}/LWIP/App/*",
+                "${workspaceFolder}/LWIP/Target/*"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
