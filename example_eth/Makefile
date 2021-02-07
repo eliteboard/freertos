@@ -208,7 +208,8 @@ AS_DEFS =
 # C defines
 C_DEFS =  \
 -DUSE_HAL_DRIVER \
--DSTM32H743xx
+-DSTM32H743xx \
+-DDATA_IN_D2_SRAM
 
 
 # AS includes
